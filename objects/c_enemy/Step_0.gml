@@ -12,18 +12,10 @@ switch(state){
             
             
             if(target > 0){
-                var dist = point_distance(x, y, target.x, target.y);
-                
-                if(dist < 100){
-                    if(collision_line(x, y, target.x, target.y, p_wall, 0, 0) < 0){
-                        state = STATE_CHASE;
-                    } else {
-                        dir = random(360);
-                    }
-                } else {
-                    dir = random(360);
-                }
-            }
+                state = STATE_CHASE;
+            } else {
+				dir = random(360);
+			}
         }
     break;
     

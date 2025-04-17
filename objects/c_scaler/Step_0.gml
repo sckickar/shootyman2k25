@@ -1,6 +1,8 @@
-if(browser_width != width || browser_height != height){
-	width = min(base_width, browser_width);
-	height = min(base_height, browser_height);
+if(os_browser != browser_not_a_browser){
+	if(browser_width != width || browser_height != height){
+		width = min(base_width, browser_width);
+		height = min(base_height, browser_height);
 	
-	scale(base_width, base_height, width, height, true);
+		scale(base_width, base_height, width, height, true);
+	}
 }

@@ -1,7 +1,7 @@
 {
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
-  "name": "get_target",
+  "name": "create_projectile",
   "isDnD": false,
   "isCompatibility": false,
   "parent": {

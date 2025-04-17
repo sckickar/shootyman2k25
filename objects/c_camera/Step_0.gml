@@ -19,5 +19,7 @@ __view_set( e__VW.XView, 0, clamp(__view_get( e__VW.XView, 0 ), 0, room_width - 
 __view_set( e__VW.YView, 0, clamp(__view_get( e__VW.YView, 0 ), 0, room_height - __view_get( e__VW.HView, 0 )) );
 
 stamina_current = c_player.current_ammo;
+stamina_max = c_player.max_ammo;
 
 
+gun_type = clamp(c_player.current_weapon_index, 0, 4);

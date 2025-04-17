@@ -8,7 +8,6 @@ feet_sprite = s_player_feet;
 
 frame = 0;
 frame_speed = 0.3;
-is_hurt = false;
 
 animation_data = ds_map_create();
 anim_lengths = ds_map_create();
@@ -18,6 +17,7 @@ ds_map_add(anim_lengths, "walk", 4);
 ds_map_add(anim_lengths, "hurt", 1);
 
 generate_player_sprite_ds();
+generate_player_weapons();
 
 ds_map_add_map(animation_data, "idle", idle_map);
 ds_map_add_map(animation_data, "walk", walk_map);
@@ -41,10 +41,14 @@ state_duration = 10;
 knockback = 0;
 knockback_speed = 4;
 
-// shoot tingz
-shoot_timer = 10;
-shoot_duration = 10;
+// weapon tingz
+current_weapon_index = 0;
+current_weapon = weapons[| current_weapon_index];
 
-current_ammo = 10;
-max_ammo = current_ammo;
+// shoot tingz
+shoot_timer = current_weapon[? "fire_rate"];
+shoot_duration = current_weapon[? "fire_rate"];
+
+current_ammo = current_weapon[? "current_ammo"];
+max_ammo = current_weapon[? "max_ammo"];
 

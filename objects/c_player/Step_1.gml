@@ -1,3 +1,7 @@
+current_weapon = weapons[| current_weapon_index];
+max_ammo = current_weapon[? "max_ammo"];
+current_ammo = current_weapon[? "current_ammo"];
+
 var enemy = instance_place(x, y, p_enemies);
 var enemy_bullet = instance_place(x, y, p_enemy_projectiles);
 move_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));

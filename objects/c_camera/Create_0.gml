@@ -4,12 +4,13 @@ last_y = 0;
 gui_sprite = s_ui;
 gui_width = sprite_get_width(gui_sprite);
 gui_height = sprite_get_height(gui_sprite);
-
 gun_sprite = s_ui_gun;
 gun_x_offset = 2;
 gun_y_offset = 0;
 gun_meter_width = sprite_get_width(gun_sprite);
 gun_meter_height = sprite_get_height(gun_sprite);
+gun_type = 0;
+meter_fill = 0;
 
 // UI data
 health_max = c_player.hp;

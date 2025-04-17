@@ -8,7 +8,4 @@ function get_target() {
 	        target = instance_nearest(x, y, c_player);
 	    }
 	}
-
-
-
 }

@@ -23,6 +23,7 @@ ds_map_add_map(animation_data, "walk", walk_map);
 ds_map_add_map(animation_data, "hurt", hurt_map);
 ds_map_add_map(animation_data, "attack", attack_map);
 
+
 sprite_direction = 0;
 sub_image = 0;
 sprite_direction = 0;
