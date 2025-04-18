@@ -2,12 +2,17 @@ current_weapon = weapons[| current_weapon_index];
 max_ammo = current_weapon[? "max_ammo"];
 current_ammo = current_weapon[? "current_ammo"];
 
+if(current_ammo <= 0){
+    current_weapon_index = 0;
+    current_weapon = weapons[| current_weapon_index];
+    max_ammo = current_weapon[? "max_ammo"];
+    current_ammo = current_weapon[? "current_ammo"];
+}
+
 var enemy = instance_place(x, y, p_enemies);
 var enemy_bullet = instance_place(x, y, p_enemy_projectiles);
 move_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 move_y = keyboard_check(ord("S")) - keyboard_check(ord("W"));
-// collision code
-
 var final_x = x + (move_x * max_speed);
 var final_y = y + (move_y * max_speed);
 
