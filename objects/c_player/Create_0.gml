@@ -52,3 +52,6 @@ shoot_duration = current_weapon[? "fire_rate"];
 current_ammo = current_weapon[? "current_ammo"];
 max_ammo = current_weapon[? "max_ammo"];
 
+grenade_timer = 20;
+grenade_duration = 20;
+

@@ -2,6 +2,7 @@ function generate_ranged_enemy_sprite_ds() {
 	idle_map = ds_map_create();
 	walk_map = ds_map_create();
 	hurt_map = ds_map_create();
+	fly_map = ds_map_create();
 
 	ds_map_add(idle_map, 0, 0);  // East
 	ds_map_add(idle_map, 1, 1);  // Northeast
@@ -31,5 +32,12 @@ function generate_ranged_enemy_sprite_ds() {
 	ds_map_add(hurt_map, 7, 47);  // Southeast
 
 
-
+	ds_map_add(fly_map, 0, 49);  // East
+	ds_map_add(fly_map, 1, 49);  // Northeast
+	ds_map_add(fly_map, 2, 49);  // North
+	ds_map_add(fly_map, 3, 49);  // Northwest
+	ds_map_add(fly_map, 4, 49);  // West
+	ds_map_add(fly_map, 5, 49);  // Southwest
+	ds_map_add(fly_map, 6, 49);  // South
+	ds_map_add(fly_map, 7, 49);  // Southeast
 }

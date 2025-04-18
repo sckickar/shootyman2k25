@@ -3,6 +3,7 @@ function generate_basic_melee_enemy_sprite_ds() {
 	walk_map = ds_map_create();
 	hurt_map = ds_map_create();
 	attack_map = ds_map_create();
+	fly_map = ds_map_create();
 
 	ds_map_add(idle_map, 0, 0);  // East
 	ds_map_add(idle_map, 1, 4);  // Northeast
@@ -39,7 +40,14 @@ function generate_basic_melee_enemy_sprite_ds() {
 	ds_map_add(hurt_map, 5, 58);  // Southwest
 	ds_map_add(hurt_map, 6, 60);  // South
 	ds_map_add(hurt_map, 7, 62);  // Southeast
-
-
-
+	
+	ds_map_add(fly_map, 0, 65);  // East
+	ds_map_add(fly_map, 1, 65);  // Northeast
+	ds_map_add(fly_map, 2, 65);  // North
+	ds_map_add(fly_map, 3, 65);  // Northwest
+	ds_map_add(fly_map, 4, 65);  // West
+	ds_map_add(fly_map, 5, 65);  // Southwest
+	ds_map_add(fly_map, 6, 65);  // South
+	ds_map_add(fly_map, 7, 65);  // Southeast
+	
 }

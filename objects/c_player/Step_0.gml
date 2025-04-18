@@ -67,4 +67,13 @@ if (mouse_check_button(mb_left)) {
     shoot_timer = max(0, shoot_timer - 0.5);
 }
 
+if (mouse_check_button_pressed(mb_right)) {
+    grenade_timer++;
+    if (grenade_timer >= grenade_duration) {
+         var grenade = instance_create(x, y, c_nade);
+		  grenade.direction = point_direction(x, y, mouse_x, mouse_y);
+    }
+
+}
+
 previous_state = state;

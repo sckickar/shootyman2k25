@@ -8,6 +8,12 @@ if(slide_speed > 0){
   instance_create(x + random(4), y + random(4), c_blood);
 }
 
+if(slide_speed % 2){
+	repeat(5){
+		instance_create(x + random(6), y + random(6), c_blood);
+	}
+}
+
 if(slide_speed <= 2){
     instance_destroy();
 }

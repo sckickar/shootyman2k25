@@ -1,7 +1,3 @@
-depth = -y;
-
-
-
 if (state == "onair") {
     y += zspeed;
 	sway_angle += sway_speed;

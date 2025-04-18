@@ -143,6 +143,17 @@ switch(state){
             
         }
     break;
+	
+	case STATE_FLYING:
+        depth = -y;
+
+		zspeed += zgrav;
+		z += zspeed;
+
+		if(z <= 0){
+		    instance_destroy();
+		}
+    break;
     
     case STATE_DEAD:
         instance_destroy();

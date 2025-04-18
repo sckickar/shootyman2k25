@@ -5,7 +5,7 @@ function macros() {
 #macro STATE_DEAD 3
 #macro STATE_ATTACK 4
 #macro STATE_CHASE 5
-
+#macro STATE_FLYING 6
 
 
 }

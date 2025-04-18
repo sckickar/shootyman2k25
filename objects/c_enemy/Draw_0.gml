@@ -4,7 +4,7 @@ switch(state) {
     case STATE_IDLE:   anim_state_str = "idle";   break;
     case STATE_WALK:   anim_state_str = "walk";   break;
     case STATE_HURT:   anim_state_str = "hurt";   break;
-    //case STATE_DEAD:  anim_state_str = "death";  break;
+    case STATE_FLYING:  anim_state_str = "fly";  break;
     case STATE_ATTACK:  anim_state_str = "attack";  break;
 }
 
@@ -15,5 +15,5 @@ var start_frame = ds_map_find_value(current_anim_map, sprite_direction);
 var frame_index = start_frame + floor(frame);
 
 // For the body it should always be a static 1 frame sprite
-draw_sprite(body_sprite, frame_index, x, y);
+draw_sprite(body_sprite, frame_index, x, y - z);
 
