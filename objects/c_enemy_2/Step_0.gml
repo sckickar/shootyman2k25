@@ -98,7 +98,7 @@ switch (state) {
             knockback_speed *= 0.8;
             x += lengthdir_x(knockback_speed, knockback);
             y += lengthdir_y(knockback_speed, knockback);
-            instance_create(x, y, c_blood);
+            instance_create_layer(x, y, "Instances", c_blood);
         }
 
 
@@ -108,7 +108,7 @@ switch (state) {
             frame = 0;
         }
 
-        instance_create(x, y, c_blood_splat);
+        instance_create_layer(x, y, "Instances", c_blood_splat);
 
         if (state_timer >= 5) {
             knockback_speed = 0;

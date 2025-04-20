@@ -69,7 +69,6 @@
     {"id":{"name":"c_explosion_2","path":"objects/c_explosion_2/c_explosion_2.yy",},"order":3,},
     {"id":{"name":"general_decals_controller","path":"objects/general_decals_controller/general_decals_controller.yy",},"order":2,},
     {"id":{"name":"game_controller","path":"objects/game_controller/game_controller.yy",},"order":3,},
-    {"id":{"name":"c_road","path":"objects/c_road/c_road.yy",},"order":0,},
     {"id":{"name":"c_nade","path":"objects/c_nade/c_nade.yy",},"order":3,},
     {"id":{"name":"room0","path":"rooms/room0/room0.yy",},"order":0,},
     {"id":{"name":"notes","path":"notes/notes/notes.yy",},"order":0,},

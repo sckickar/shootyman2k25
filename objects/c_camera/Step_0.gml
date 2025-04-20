@@ -1,22 +1,28 @@
 var x_to, y_to;
 
-last_x = c_player.x;
-last_y = c_player.y;
-
-move_towards_point(mouse_x, mouse_y, 0);
-
-x_to = last_x + lengthdir_x(min(96, distance_to_point(mouse_x, mouse_y)), direction);
-y_to = last_y + lengthdir_y(min(96, distance_to_point(mouse_x, mouse_y)), direction);
+if(follow != noone){
+	x_to = follow.x;
+	y_to = follow.y;
+}
 
 x += (x_to - x) / 25;
 y += (y_to - y) / 25;
 
-__view_set( e__VW.XView, 0, (-(__view_get( e__VW.WView, 0 ) / 2) + x) );
-__view_set( e__VW.YView, 0, (-(__view_get( e__VW.HView, 0 ) / 2) + y) );
+// Get the current camera
+var cam = view_camera[0];
 
+// Set camera position (centered on the object)
+var cam_width = camera_get_view_width(cam);
+var cam_height = camera_get_view_height(cam);
+var cam_x = x - (cam_width / 2);
+var cam_y = y - (cam_height / 2);
 
-__view_set( e__VW.XView, 0, clamp(__view_get( e__VW.XView, 0 ), 0, room_width - __view_get( e__VW.WView, 0 )) );
-__view_set( e__VW.YView, 0, clamp(__view_get( e__VW.YView, 0 ), 0, room_height - __view_get( e__VW.HView, 0 )) );
+// Clamp camera position within room boundaries
+cam_x = clamp(cam_x, 0, room_width - cam_width);
+cam_y = clamp(cam_y, 0, room_height - cam_height);
+
+// Update camera position
+camera_set_view_pos(cam, cam_x, cam_y);
 
 stamina_current = c_player.current_ammo;
 stamina_max = c_player.max_ammo;

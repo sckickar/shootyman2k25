@@ -1,6 +1,13 @@
 last_x = 0;
 last_y = 0;
 
+follow = c_player;
+cam_width = 400;
+cam_height = 300;
+
+x_to = room_width / 2;
+y_to = room_height / 2;
+
 gui_sprite = s_ui;
 gui_width = sprite_get_width(gui_sprite);
 gui_height = sprite_get_height(gui_sprite);

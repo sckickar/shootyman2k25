@@ -11,5 +11,5 @@ if(should_slide == true){
 
 
 repeat(5){
-    instance_create(x, y, c_blood_splat);
+    instance_create_layer(x, y, "Instances", c_blood_splat);
 }

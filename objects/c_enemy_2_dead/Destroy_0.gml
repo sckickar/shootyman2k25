@@ -1,2 +1,2 @@
-general_add_decal(sprite_index, sprite_direction, 0, x, y);
+add_decal(sprite_index, sprite_direction, 0, x, y);
 
