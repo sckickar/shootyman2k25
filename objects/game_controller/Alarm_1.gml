@@ -1,5 +1,5 @@
 if (random(1) < spawn_chance && instance_number(enemy_object) < max_enemies) {
-	enemy_object = choose(c_enemy, c_enemy_2);
+	enemy_object = choose(c_enemy_3, c_enemy); 
     var view_x = __view_get(e__VW.XView, 0);
     var view_y = __view_get(e__VW.YView, 0);
     var view_w = __view_get(e__VW.WView, 0);
