@@ -29,3 +29,4 @@ stamina_max = c_player.max_ammo;
 
 
 gun_type = clamp(c_player.current_weapon_index, 0, 4);
+nades = clamp(c_player.grenades, 0, 5);

@@ -11,9 +11,14 @@ function add_decal(argument0, argument1, argument2, argument3, argument4) {
 	dList[dIndex,3] = argument3;
 	dList[dIndex,4] = argument4
 
-	dIndex ++;
+	dIndex++;
+	
+	show_debug_message(dIndex);
 
-	dIndex = clamp(dIndex, 0, 200);
+	if dIndex >= MAX_DECAL_SIZE {
+		show_debug_message("MAX DECAL REACHED!")
+		dIndex = 0;
+	}
 
 
 

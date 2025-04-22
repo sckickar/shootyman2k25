@@ -55,3 +55,4 @@ max_ammo = current_weapon[? "max_ammo"];
 grenade_timer = 20;
 grenade_duration = 20;
 
+grenades = 5;

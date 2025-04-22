@@ -14,6 +14,7 @@ if(slide_speed % 2){
 }
 
 if(slide_speed <= 2){
+   
     instance_destroy();
 }
 

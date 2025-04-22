@@ -9,4 +9,3 @@ dIndex = 0;
 surface_reset_target();
 
 alarm[0] = 60;
-

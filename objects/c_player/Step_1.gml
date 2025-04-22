@@ -11,6 +11,7 @@ if(current_ammo <= 0){
 
 var enemy = instance_place(x, y, p_enemies);
 var enemy_bullet = instance_place(x, y, p_enemy_projectiles);
+var pickups = instance_place(x, y, c_pickups)
 move_x = keyboard_check(ord("D")) - keyboard_check(ord("A"));
 move_y = keyboard_check(ord("S")) - keyboard_check(ord("W"));
 var final_x = x + (move_x * max_speed);
@@ -52,4 +53,27 @@ if (enemy_bullet != noone && state != STATE_HURT) {
     with(enemy_bullet) {
         instance_destroy();
     }
+}
+
+if(pickups != noone){
+	with(pickups){
+		if(state == "landed"){
+			switch(type){
+				case 0:
+					other.grenades = 5;
+				break;
+				case 1:
+				case 2:
+					other.current_weapon_index = type;
+		            other.current_weapon = other.weapons[| other.current_weapon_index];
+		            other.current_weapon[? "current_ammo"] = other.current_weapon[? "max_ammo"];
+		            other.current_ammo = other.current_weapon[? "current_ammo"];
+		            other.max_ammo = other.current_weapon[? "max_ammo"];
+					
+				break;
+			}
+			instance_destroy();
+		}
+    
+	}
 }

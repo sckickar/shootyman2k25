@@ -1,5 +1,5 @@
 image_speed = 0;
-type = irandom_range(0, 5);
+type = irandom_range(0, 4);
 depth = -999999;
 // gravity shit
 zgrav = 0.2;

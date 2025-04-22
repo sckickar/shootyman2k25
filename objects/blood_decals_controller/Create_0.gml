@@ -2,7 +2,7 @@ globalvar dList, dIndex, decalSurface;
 
 dIndex = 0;
 
-for(i = 0; i < 200; i++){
+for(i = 0; i < MAX_DECAL_SIZE; i++){
     dList[i, 0] = noone;
     dList[i, 1] = 0;
     dList[i, 2] = 0;
@@ -12,4 +12,3 @@ for(i = 0; i < 200; i++){
 
 decalSurf = surface_create(room_width, room_height);
 alarm[0] = 60;
-

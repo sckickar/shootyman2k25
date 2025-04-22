@@ -6,6 +6,6 @@ function macros() {
 #macro STATE_ATTACK 4
 #macro STATE_CHASE 5
 #macro STATE_FLYING 6
-
+#macro MAX_DECAL_SIZE 512
 
 }

@@ -1,5 +1,5 @@
 if (random(1) < spawn_chance && instance_number(enemy_object) < max_enemies) {
-	enemy_object = choose(c_enemy_3, c_enemy); 
+	enemy_object = choose(c_enemy, c_enemy_4, c_enemy_3); 
     var view_x = __view_get(e__VW.XView, 0);
     var view_y = __view_get(e__VW.YView, 0);
     var view_w = __view_get(e__VW.WView, 0);
@@ -31,10 +31,6 @@ if (random(1) < spawn_chance && instance_number(enemy_object) < max_enemies) {
     spawn_y = clamp(spawn_y, 0, room_height);
     
     if (place_meeting(spawn_x, spawn_y, p_wall)) {
-        var view_center_x = view_x + (view_w / 2);
-        var view_center_y = view_y + (view_h / 2);
-        var dir_to_center = point_direction(spawn_x, spawn_y, view_center_x, view_center_y);
-        
         var max_attempts = 10;
         var attempt = 0;
         var found_valid_position = false;

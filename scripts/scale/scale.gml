@@ -145,4 +145,11 @@ function scale_ui_browser() {
 	);
 
 	draw_set_color(c_white);
+	
+	draw_sprite_ext(
+	    nade_sprite, nades, 
+	    gui_x + apply_scale_x(gun_x_offset), 
+	    gui_y + apply_scale_y(gun_y_offset) + 300, 
+	    global.gui_scale_x, global.gui_scale_y, 0, c_white, 1
+	);
 }

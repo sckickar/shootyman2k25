@@ -54,7 +54,6 @@ if (mouse_check_button(mb_left)) {
             shoot_timer = 0;
 
             muzzle.depth = -y;
-            show_debug_message(current_weapon[? "name"]);
             if (current_weapon_index != 0) {
                 current_weapon[? "current_ammo"] -= 1;
                 current_ammo = current_weapon[? "current_ammo"];
@@ -69,11 +68,11 @@ if (mouse_check_button(mb_left)) {
 
 if (mouse_check_button_pressed(mb_right)) {
     grenade_timer++;
-    if (grenade_timer >= grenade_duration) {
-         var grenade = instance_create(x, y, c_nade);
-		  grenade.direction = point_direction(x, y, mouse_x, mouse_y);
-    }
+    if (grenade_timer >= grenade_duration && grenades > 0) {
+         var grenade = instance_create_layer(x, y, "Instances", c_nade);
+		 grenade.direction = point_direction(x, y, mouse_x, mouse_y);
+		 grenades -= 1;
+	}
 
 }
-
 previous_state = state;

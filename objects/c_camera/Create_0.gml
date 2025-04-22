@@ -19,6 +19,12 @@ gun_meter_height = sprite_get_height(gun_sprite);
 gun_type = 0;
 meter_fill = 0;
 
+nades = c_player.grenades;
+
+nade_sprite = s_ui_nades;
+nade_meter_width = sprite_get_width(nade_sprite);
+nade_meter_height = sprite_get_height(nade_sprite);
+
 // UI data
 health_max = c_player.hp;
 health_current = c_player.hp;
