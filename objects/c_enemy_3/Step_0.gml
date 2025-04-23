@@ -56,9 +56,6 @@ switch(state){
         if (frame >= ds_map_find_value(anim_lengths, "hurt")) {
             frame = 0;
         }
-        
-        instance_create_layer(x, y, "Instances", c_blood_splat);
-        
         if(state_timer >= 5){
             knockback_speed = 0;
             if(hp <= 0){
