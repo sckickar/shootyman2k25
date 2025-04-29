@@ -29,4 +29,13 @@ function generate_player_weapons() {
 	ds_map_add(shotgun, "damage", 1);
 	ds_list_add(weapons, shotgun);
 	
+	var rocket_launcher = ds_map_create();
+	ds_map_add(rocket_launcher, "name", "Rocket Launcher");
+	ds_map_add(rocket_launcher, "fire_rate", 25);  // Frames between shots
+	ds_map_add(rocket_launcher, "current_ammo", 3);
+	ds_map_add(rocket_launcher, "max_ammo", 3);
+	ds_map_add(rocket_launcher, "ammo_cost", 1);
+	ds_map_add(rocket_launcher, "damage", 1);
+	ds_list_add(weapons, rocket_launcher);
+	
 }

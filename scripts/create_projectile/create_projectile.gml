@@ -16,5 +16,12 @@ function create_projectile(_xoffset, _yoffset, type){
 	            bullet.speed = 7;
 			}
 		break;
+		
+		case 3: // rocket launcher
+			var missile = instance_create(x + _xoffset, y + _yoffset, c_missile);
+	            missile.target_x = mouse_x;
+				missile.target_y = mouse_y;
+				missile.homing_speed = 3;
+		break;
 	}
 }

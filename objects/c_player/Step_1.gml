@@ -64,6 +64,7 @@ if(pickups != noone){
 				break;
 				case 1:
 				case 2:
+				case 3:
 					other.current_weapon_index = type;
 		            other.current_weapon = other.weapons[| other.current_weapon_index];
 		            other.current_weapon[? "current_ammo"] = other.current_weapon[? "max_ammo"];
